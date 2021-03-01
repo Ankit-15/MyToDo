@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>My ToDo - Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/login.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+    <div class="sidenav">
+      <a href="/"><button class=" ml-4 btn btn-outline-success"><strong><i class="fa fa-angle-double-left" style="font-size:30px;color:white"></i></strong></button></a>
+         <div class="login-main-text">
+            <h2>Register<br></h2>
+            <p> Sign Up to the ToDo App.</p>
+         </div>
+      </div>
+      <div class="main">
+        <div class="mt-3"> <%-include('flash')-%>
+        </div>
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form class="needs-validation" action="/register" novalidate method="POST">
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input type="text" required name="username" class="form-control" placeholder="User Name">
+                     <div class="valid-feedback">
+                        Looks Good!
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" required name="password" class="form-control" placeholder="Password">
+                     <div class="valid-feedback">
+                        Looks Good!
+                     </div>
+                  </div>
+                  <a href="/register"><button type="submit" class="btn btn-black">Register</button></a>
+               </form>
+            </div>
+         </div>
+      </div>	<script type="text/javascript">
+         // Example starter JavaScript for disabling form submissions if there are invalid fields
+         (function() {
+           'use strict';
+           window.addEventListener('load', function() {
+             // Fetch all the forms we want to apply custom Bootstrap validation styles to
+             var forms = document.getElementsByClassName('needs-validation');
+             // Loop over them and prevent submission
+             var validation = Array.prototype.filter.call(forms, function(form) {
+               form.addEventListener('submit', function(event) {
+                 if (form.checkValidity() === false) {
+                   event.preventDefault();
+                   event.stopPropagation();
+                 }
+                 form.classList.add('was-validated');
+               }, false);
+             });
+           }, false);
+         })();
+         window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+        //   window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+         </script>
+		
+</body>
+</html>

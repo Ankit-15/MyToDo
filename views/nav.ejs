@@ -1,0 +1,40 @@
+<div class="container">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
+    <div class="container">
+        <img class="logo" src="../images/todo1.jpg" alt="">
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link  navi" href="/">Home</a>
+          <a class="nav-link  navi" href="/userhome">Lists</a>
+          <div class="nav-item dropdown">
+            <a class="nav-link navi dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              My ToDos
+            </a>
+
+         
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <% lists.forEach(item=>{ %>
+                <li><a class="dropdown-item" href="/<%=item.name%>">
+                    <%=item.name%>
+                  </a></li>
+                <% }) %>
+            </ul >
+          </div>
+        </div>
+        <div class="navbar-nav ms-auto">
+          
+
+   
+          <a href="/logout" class="navi nav-link">Logout</a>
+
+  </div>
+      </div>
+      </div>
+  </nav></div> 
+ 
